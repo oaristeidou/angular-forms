@@ -13,11 +13,12 @@
     <legend>Summary</legend>
     <div class="form-field">
       <label>Title:</label>
-      <input name="title" [(ngModel)]="lesson.title" required>
+      <input name="title" [(ngModel)]="lesson.title" required
+      minlength="10" maxlength="15">
     </div>
     <div class="form-field">
       <label>Duration:</label>
-      <input name="duration" [(ngModel)]="lesson.duration">
+      <input name="duration" [(ngModel)]="lesson.duration" pattern="[0-9]+">
     </div>
     <div class="form-field">
       <label>Level:</label>
