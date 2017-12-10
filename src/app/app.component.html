@@ -8,7 +8,7 @@
 
 <h3>Create a form - Template Driven</h3>
 
-<form autocomplete="off" novalidate>
+<form #f="ngForm" autocomplete="off" novalidate>
   <fieldset>
     <legend>Summary</legend>
     <div class="form-field">
@@ -28,10 +28,10 @@
   </fieldset>
 
   <p>
-    <button class="lesson-button" type="submit">Submit</button>
+    <button [disabled]="!f.valid" class="lesson-button" type="submit">Submit</button>
   </p>
 
-
+  {{f | json}}
   {{lesson | json}}
 </form>
 
