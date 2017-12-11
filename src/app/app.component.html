@@ -9,8 +9,8 @@
 <h3>Create a form - Template Driven</h3>
 
 <form #f="ngForm" autocomplete="off" novalidate>
-  <fieldset>
-    <legend>Summary</legend>
+  <fieldset ngModelGroup="summary" #summary="ngModelGroup">
+    <legend [ngStyle]="summaryStyle(summary)">Summary</legend>
     <div class="form-field">
       <label>Title:</label>
       <input name="title" [(ngModel)]="lesson.title" required

@@ -9,4 +9,10 @@ import {Lesson} from "./lesson.enum";
 export class AppComponent {
   title = 'Form App';
   public lesson = new Lesson();
+
+  summaryStyle (summary){
+    return {
+      color: !summary.valid && !summary.pristine ? 'red' : 'black'
+    }
+  }
 }
