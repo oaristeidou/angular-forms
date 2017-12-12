@@ -3,15 +3,15 @@
 <form [formGroup]="myForm" autocomplete="off" novalidate>
   <div class="form-field">
     <label>Title:</label>
-    <input required>
+    <input formControlName="title" required>
   </div>
   <div class="form-field">
     <label>Duration:</label>
-    <input>
+    <input formControlName="duration">
   </div>
   <div class="form-field">
     <label>Description:</label>
-    <textarea></textarea>
+    <textarea formControlName="description"></textarea>
   </div>
   <div class="form-field">
     <button class="lesson-button" type="submit">Create Lesson</button>
